@@ -1,0 +1,7 @@
+{
+  "name": "visual-renderer",
+  "private": true,
+  "dependencies": {
+    "playwright-core": "^1.58.2"
+  }
+}
