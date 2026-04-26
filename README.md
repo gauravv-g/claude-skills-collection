@@ -1,6 +1,6 @@
 # Claude Skills Collection
 
-**154 consolidated skills from 12 world-class repositories — all in one place.**
+**193 consolidated skills from 13 world-class repositories — all in one place.**
 
 A single `/auto` command that automatically selects and invokes the most relevant skills for any task. No need to know which skill to use when.
 
@@ -8,7 +8,7 @@ A single `/auto` command that automatically selects and invokes the most relevan
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/claude-skills-collection.git ~/.claude/skills-collection
+git clone https://github.com/YOUR_USERNAME/claude-skills-collection.git ~/.claude/skills-collection
 
 # Install everything
 cp -r ~/.claude/skills-collection/skills/* ~/.claude/skills/
@@ -23,10 +23,11 @@ That's it! Now use `/auto` followed by any task.
 
 ## What's Included
 
-### 154 Skills Across 15 Categories
+### 193 Skills Across 16 Categories
 
 | Category | Skills |
 |----------|--------|
+| Multi-Agent Orchestration | autopilot, team, deep-interview, ultraqa, autoresearch, debug, verify, plan, and 31 more |
 | Planning & Architecture | planning, brainstorming, designing-workflow-skills |
 | Development Workflow | subagent-driven-development, dispatching-parallel-agents, executing-plans, systematic-debugging, test-driven-development, do, smart-explore |
 | Code Quality | verification-before-completion, receiving-code-review, requesting-code-review, finishing-a-development-branch, code-maturity-assessor, skill-improver, second-opinion, karpathy-guidelines |
@@ -62,15 +63,86 @@ That's it! Now use `/auto` followed by any task.
 
 The `/auto` command analyzes your task and automatically selects the most relevant skills based on:
 
-1. **Planning Tasks** → planning, brainstorming
-2. **Development Tasks** → subagent-driven-development, executing-plans, test-driven-development, do
-3. **Debugging Tasks** → systematic-debugging, debug-buttercup
-4. **Code Review Tasks** → receiving-code-review, requesting-code-review, second-opinion
-5. **UI/UX Tasks** → ui-ux-pro-max, design, design-system
-6. **Documentation Tasks** → obsidian-markdown, json-canvas, mem-search
-7. **Security Tasks** → LLM_Testing, browser-use, fuzzing, codeql, semgrep
-8. **DevOps Tasks** → dockerfile-generator, k8s-yaml-generator, terraform-generator, github-actions-generator
-9. **Git Tasks** → using-git-worktrees, finishing-a-development-branch, git-cleanup
+### DEFAULT: Multi-Agent Orchestration
+**For ALL tasks, use multi-agent orchestration first:**
+→ Invoke: **autopilot** (primary), **team** (for complex tasks)
+
+### Planning Tasks
+If the task involves:
+- Planning new features
+- Breaking down work
+- Creating implementation plans
+→ Invoke: **deep-interview** (for requirements), **planning**, **brainstorming**
+
+### Development Tasks
+If the task involves:
+- Writing code
+- Implementing features
+- Refactoring
+→ Invoke: **autopilot**, **team**, **subagent-driven-development**, **executing-plans**, **test-driven-development**, **do**
+
+### Debugging Tasks
+If the task involves:
+- Fixing bugs
+- Debugging errors
+- Troubleshooting
+→ Invoke: **debug**, **systematic-debugging**, **debug-buttercup**
+
+### Code Review Tasks
+If the task involves:
+- Reviewing code
+- Requesting reviews
+- Processing feedback
+→ Invoke: **ultraqa**, **receiving-code-review**, **requesting-code-review**, **second-opinion**
+
+### UI/UX Tasks
+If the task involves:
+- Designing UI
+- Styling components
+- Creating design systems
+→ Invoke: **ui-ux-pro-max**, **design**, **design-system**
+
+### Documentation Tasks
+If the task involves:
+- Writing documentation
+- Creating knowledge bases
+- Working with markdown
+→ Invoke: **wiki**, **obsidian-markdown**, **json-canvas**, **mem-search**
+
+### Security Tasks
+If the task involves:
+- Security testing
+- Vulnerability assessment
+- Security research
+→ Invoke: **LLM_Testing**, **browser-use**, **fuzzing**, **codeql**, **semgrep**
+
+### DevOps Tasks
+If the task involves:
+- Infrastructure
+- Deployment
+- CI/CD
+→ Invoke: **dockerfile-generator**, **k8s-yaml-generator**, **terraform-generator**, **github-actions-generator**
+
+### Git Tasks
+If the task involves:
+- Branching
+- Merging
+- Version control
+→ Invoke: **using-git-worktrees**, **finishing-a-development-branch**, **git-cleanup**
+
+### Research Tasks
+If the task involves:
+- Researching topics
+- Learning new technologies
+- Understanding concepts
+→ Invoke: **autoresearch**, **deep-dive**, **learner**
+
+### Quality Assurance Tasks
+If the task involves:
+- Testing
+- Verification
+- Quality checks
+→ Invoke: **ultraqa**, **verify**, **test-driven-development**
 
 ## Example Usage
 
@@ -81,6 +153,18 @@ The `/auto` command analyzes your task and automatically selects the most releva
 /auto review the security of this code
 /auto generate a Dockerfile for this project
 ```
+
+## Multi-Agent Orchestration
+
+**oh-my-claudecode multi-agent orchestration is integrated into /auto.**
+
+Every time you use `/auto`, it will:
+1. Automatically use multi-agent orchestration (autopilot/team)
+2. Apply the appropriate workflow based on task complexity
+3. Use specialized agents for planning, execution, and verification
+4. Ensure world-class results with zero manual intervention
+
+**No need to know which skill to use. Just use `/auto` and multi-agent orchestration happens automatically.**
 
 ## Source Repositories
 
@@ -98,6 +182,7 @@ This collection consolidates skills from:
 - **trailofbits-skills** — https://github.com/trailofbits/claude-code-skills
 - **shannon** — https://github.com/anthropics/claude-code
 - **andrej-karpathy-skills** — https://github.com/forrestchang/andrej-karpathy-skills
+- **oh-my-claudecode** — https://github.com/Yeachan-Heo/oh-my-claudecode
 
 ## License
 
