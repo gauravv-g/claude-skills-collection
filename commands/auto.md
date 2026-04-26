@@ -14,7 +14,47 @@ The user is a vibe coder who relies completely on AI for world-class engineering
 3. Invoke them automatically
 4. Deliver world-class results
 
-## Available Skills (154 total)
+## Available Skills (193 total)
+
+### Multi-Agent Orchestration (oh-my-claudecode)
+- **autopilot** — Autonomous development mode with multi-agent orchestration
+- **deep-interview** — Socratic questioning for requirements clarification
+- **team** — Multi-agent team orchestration (recommended for complex tasks)
+- **ask** — Query external providers (Codex, Gemini, etc.)
+- **setup** — OMC setup wizard
+- **omc-setup** — OMC setup
+- **plan** — Planning capabilities
+- **debug** — Debugging assistance
+- **verify** — Verification
+- **ultrawork** — Ultra work mode
+- **ultraqa** — Ultra quality assurance
+- **ralph** — Ralph loop management
+- **autoresearch** — Automated research
+- **skillify** — Convert to skills
+- **learner** — Learning and adaptation
+- **remember** — Memory and recall
+- **wiki** — Wiki integration
+- **writer-memory** — Writer memory
+- **ai-slop-cleaner** — Clean up AI-generated code slop
+- **ccg** — Code generation capabilities
+- **deep-dive** — Deep dive analysis
+- **deepinit** — Deep initialization
+- **external-context** — External context management
+- **hud** — Heads-up display for session information
+- **mcp-setup** — MCP server setup
+- **omc-doctor** — Diagnostic and troubleshooting
+- **omc-reference** — Reference documentation
+- **omc-teams** — Team orchestration setup
+- **project-session-manager** — Project session management
+- **ralplan** — Ralph planning
+- **release** — Release management
+- **sciomc** — Scientific OMC capabilities
+- **self-improve** — Self-improvement
+- **skill** — Skill management
+- **trace** — Tracing and debugging
+- **visual-verdict** — Visual assessment
+- **cancel** — Cancel running operations
+- **configure-notifications** — Configure system notifications
 
 ### Planning & Architecture
 - **planning** — Create structured implementation plans with phased execution
@@ -200,33 +240,37 @@ The user is a vibe coder who relies completely on AI for world-class engineering
 
 For any task, automatically select skills based on these rules:
 
+### DEFAULT: Multi-Agent Orchestration
+**For ALL tasks, use multi-agent orchestration first:**
+→ Invoke: **autopilot** (primary), **team** (for complex tasks)
+
 ### Planning Tasks
 If the task involves:
 - Planning new features
 - Breaking down work
 - Creating implementation plans
-→ Invoke: **planning**, **brainstorming**
+→ Invoke: **deep-interview** (for requirements), **planning**, **brainstorming**
 
 ### Development Tasks
 If the task involves:
 - Writing code
 - Implementing features
 - Refactoring
-→ Invoke: **subagent-driven-development**, **executing-plans**, **test-driven-development**, **do**
+→ Invoke: **autopilot**, **team**, **subagent-driven-development**, **executing-plans**, **test-driven-development**, **do**
 
 ### Debugging Tasks
 If the task involves:
 - Fixing bugs
 - Debugging errors
 - Troubleshooting
-→ Invoke: **systematic-debugging**, **debug-buttercup**
+→ Invoke: **debug**, **systematic-debugging**, **debug-buttercup**
 
 ### Code Review Tasks
 If the task involves:
 - Reviewing code
 - Requesting reviews
 - Processing feedback
-→ Invoke: **receiving-code-review**, **requesting-code-review**, **second-opinion**
+→ Invoke: **ultraqa**, **receiving-code-review**, **requesting-code-review**, **second-opinion**
 
 ### UI/UX Tasks
 If the task involves:
@@ -240,7 +284,7 @@ If the task involves:
 - Writing documentation
 - Creating knowledge bases
 - Working with markdown
-→ Invoke: **obsidian-markdown**, **json-canvas**, **mem-search**
+→ Invoke: **wiki**, **obsidian-markdown**, **json-canvas**, **mem-search**
 
 ### Security Tasks
 If the task involves:
@@ -263,6 +307,20 @@ If the task involves:
 - Version control
 → Invoke: **using-git-worktrees**, **finishing-a-development-branch**, **git-cleanup**
 
+### Research Tasks
+If the task involves:
+- Researching topics
+- Learning new technologies
+- Understanding concepts
+→ Invoke: **autoresearch**, **deep-dive**, **learner**
+
+### Quality Assurance Tasks
+If the task involves:
+- Testing
+- Verification
+- Quality checks
+→ Invoke: **ultraqa**, **verify**, **test-driven-development**
+
 ## Execution Protocol
 
 1. **Analyze** the task to understand what needs to be done
@@ -271,38 +329,88 @@ If the task involves:
 4. **Execute** the task using the invoked skills
 5. **Verify** the results before marking complete
 
+### Multi-Agent Orchestration Protocol
+
+For ALL tasks, follow this multi-agent orchestration flow:
+
+1. **Requirements Clarification** (if needed)
+   - Use **deep-interview** for complex or unclear requirements
+   - Use **ask-questions-if-underspecified** for missing details
+
+2. **Planning Phase**
+   - Use **planning** for structured implementation plans
+   - Use **brainstorming** for exploring options
+
+3. **Execution Phase** (choose based on task complexity)
+   - **Simple tasks:** Use **autopilot** for autonomous execution
+   - **Complex tasks:** Use **team** for multi-agent collaboration
+   - **Parallel tasks:** Use **dispatching-parallel-agents**
+   - **Phased execution:** Use **executing-plans** or **do**
+
+4. **Quality Assurance**
+   - Use **ultraqa** for comprehensive quality checks
+   - Use **verify** for verification
+   - Use **test-driven-development** for test coverage
+
+5. **Completion**
+   - Use **verification-before-completion** for final checks
+   - Use **finishing-a-development-branch** for integration
+
 ## Example Workflows
 
-### Feature Development
-1. **planning** — Create implementation plan
-2. **subagent-driven-development** — Execute with subagents
-3. **test-driven-development** — Write tests
-4. **verification-before-completion** — Verify results
+### Feature Development (Multi-Agent)
+1. **deep-interview** — Clarify requirements with Socratic questioning
+2. **planning** — Create implementation plan
+3. **team** — Execute with multi-agent team (plan → prd → exec → verify → fix)
+4. **ultraqa** — Quality assurance
+5. **verification-before-completion** — Verify results
 
-### Bug Fix
-1. **systematic-debugging** — Debug the issue
-2. **executing-plans** — Execute fix
+### Bug Fix (Multi-Agent)
+1. **debug** — Debug the issue
+2. **team** — Execute fix with multi-agent team
 3. **test-driven-development** — Write regression tests
-4. **verification-before-completion** — Verify fix
+4. **ultraqa** — Quality assurance
+5. **verification-before-completion** — Verify fix
 
-### UI Design
-1. **ui-ux-pro-max** — Design UI/UX
-2. **design** — Create components
-3. **design-system** — Integrate into design system
-4. **verification-before-completion** — Verify design
+### UI Design (Multi-Agent)
+1. **deep-interview** — Clarify design requirements
+2. **ui-ux-pro-max** — Design UI/UX
+3. **design** — Create components
+4. **design-system** — Integrate into design system
+5. **verification-before-completion** — Verify design
 
-### Security Review
+### Security Review (Multi-Agent)
 1. **codeql** — Static analysis
 2. **semgrep** — Semgrep analysis
 3. **LLM_Testing** — Test for security issues
 4. **browser-use** — Test in browser
-5. **verification-before-completion** — Verify security
+5. **ultraqa** — Quality assurance
+6. **verification-before-completion** — Verify security
 
-### DevOps Setup
-1. **dockerfile-generator** — Generate Dockerfile
-2. **k8s-yaml-generator** — Generate Kubernetes YAML
-3. **github-actions-generator** — Generate CI/CD
-4. **verification-before-completion** — Verify setup
+### DevOps Setup (Multi-Agent)
+1. **deep-interview** — Clarify infrastructure requirements
+2. **dockerfile-generator** — Generate Dockerfile
+3. **k8s-yaml-generator** — Generate Kubernetes YAML
+4. **github-actions-generator** — Generate CI/CD
+5. **verification-before-completion** — Verify setup
+
+### Research Task (Multi-Agent)
+1. **autoresearch** — Automated research
+2. **deep-dive** — Deep dive analysis
+3. **learner** — Learn and adapt
+4. **wiki** — Document findings
+5. **verification-before-completion** — Verify results
+
+### Code Review (Multi-Agent)
+1. **ultraqa** — Comprehensive quality review
+2. **receiving-code-review** — Process feedback
+3. **second-opinion** — Get external opinion
+4. **verification-before-completion** — Verify changes
+
+### Autonomous Development (Simple Tasks)
+1. **autopilot** — Autonomous execution
+2. **ultraqa** — Quality assurance
+3. **verification-before-completion** — Verify results
 
 ## Always Apply
 
@@ -317,4 +425,18 @@ End every response with a clear, concrete action. Do not "summarize" or "reflect
 
 ---
 
-Now analyze the task and automatically select and invoke the most relevant skills.
+## Multi-Agent Orchestration Integration
+
+**oh-my-claudecode multi-agent orchestration is now integrated into /auto.**
+
+Every time you use `/auto`, it will:
+1. Automatically use multi-agent orchestration (autopilot/team)
+2. Apply the appropriate workflow based on task complexity
+3. Use specialized agents for planning, execution, and verification
+4. Ensure world-class results with zero manual intervention
+
+**No need to know which skill to use. Just use `/auto` and multi-agent orchestration happens automatically.**
+
+---
+
+Now analyze the task and automatically select and invoke the most relevant skills with multi-agent orchestration.
