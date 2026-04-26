@@ -1,0 +1,6 @@
+{
+  "effortLevel": "max",
+  "model": "opus[1m]",
+  "skillListingBudgetFraction": 0.05,
+  "skillListingMaxDescChars": 4096
+}
