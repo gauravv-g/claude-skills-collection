@@ -18,7 +18,7 @@
   [![Documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://github.com/gauravv-g/claude-skills-collection/wiki)
   [![Chat](https://img.shields.io/badge/chat-on%20discord-purple.svg)](https://discord.gg/)
 
-  **The ultimate collection of Claude Code skills — 193 skills from 13 world-class repositories, all in one place.**
+  **The ultimate collection of Claude Code skills — 214 skills from 14 world-class repositories, all in one place.**
 
   [Quick Start](#-quick-start) • [Features](#-features) • [Skills](#-skills) • [Documentation](#-documentation) • [Contributing](#-contributing)
 
@@ -30,7 +30,7 @@
 
 - 🎯 **One Command Magic** — Single `/auto` command that automatically selects and invokes the most relevant skills
 - 🤖 **Multi-Agent Orchestration** — Built-in support for autonomous multi-agent workflows
-- 🧠 **193 Skills** — Comprehensive coverage across 16 categories
+- 🧠 **214 Skills** — Comprehensive coverage across 17 categories
 - 🚀 **Zero Configuration** — Just clone, install, and go
 - 📚 **Extensive Documentation** — Detailed guides for every skill
 - 🔒 **Security First** — Skills for security testing, fuzzing, and vulnerability assessment
@@ -38,6 +38,8 @@
 - 🛠️ **DevOps Ready** — Complete tooling for infrastructure, CI/CD, and deployment
 - 🧪 **Testing Excellence** — Comprehensive testing and quality assurance skills
 - 🌐 **Browser Automation** — Full-featured browser interaction capabilities
+- 🔄 **Persistent Auto Mode** — Continuous automatic skill selection throughout the entire conversation
+- 🌍 **Global Skills** — Use skills across multiple projects with one-time setup
 
 ---
 
@@ -61,13 +63,44 @@ cp ~/.claude/skills-collection/settings.json ~/.claude/settings.json
 ### Usage
 
 ```bash
-# That's it! Now use /auto followed by any task
+# Use /auto for one-time automatic skill selection
 /auto add dark mode to the app
 /auto fix the authentication bug
 /auto create a PR for the new feature
 /auto review the security of this code
 /auto generate a Dockerfile for this project
+
+# Use /persistent-auto for continuous automatic skill selection
+/persistent-auto
+# Now every instruction will automatically select and invoke the most relevant skill
+create a Kubernetes deployment
+review this code for security issues
+generate a comprehensive test suite
 ```
+
+### Global Skills Setup (Recommended)
+
+Skills are stored locally in each project. To use skills across multiple projects, set up a global skills directory:
+
+```bash
+# Run the setup script (one-time setup)
+cd claude-skills-collection/setup-global-skills
+.\setup-global-skills.ps1
+
+# In any project directory, link to global skills
+cd /path/to/your/project
+C:\path\to\claude-skills-collection\setup-global-skills\setup-project-skills.ps1
+
+# Now all 214 skills are available in your project!
+```
+
+**Benefits:**
+- ✅ One central location for all skills
+- ✅ Easy to update skills globally
+- ✅ Minimal disk space usage
+- ✅ Skills available in all projects
+
+See [setup-global-skills/README.md](setup-global-skills/README.md) for detailed instructions.
 
 ---
 
