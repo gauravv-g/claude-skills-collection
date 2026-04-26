@@ -1,0 +1,103 @@
+name: 'Bug Report'
+description: 'File a bug report to help us improve the project'
+title: '[Bug] '
+labels: ['bug', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! 🐛
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 'Describe the bug'
+      description: 'A clear and concise description of what the bug is.'
+      placeholder: 'What happened? What did you expect to happen?'
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 'To Reproduce'
+      description: 'Steps to reproduce the behavior'
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 'Expected behavior'
+      description: 'A clear and concise description of what you expected to happen.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 'Screenshots'
+      description: 'If applicable, add screenshots to help explain your problem.'
+      placeholder: 'Drag and drop screenshots here'
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 'Affected Skill(s)'
+      description: 'Which skill(s) are affected by this bug?'
+      multiple: true
+      options:
+        - 'Not sure'
+        - 'Multi-Agent Orchestration'
+        - 'Planning & Architecture'
+        - 'Development Workflow'
+        - 'Code Quality'
+        - 'Git & Version Control'
+        - 'UI/UX Design'
+        - 'Documentation & Knowledge'
+        - 'Security & Testing'
+        - 'Security Research'
+        - 'Static Analysis & Security Tools'
+        - 'Fuzzing & Testing'
+        - 'Cryptography & Blockchain'
+        - 'DevOps & Infrastructure'
+        - 'Security Analysis'
+        - 'Debugging & Troubleshooting'
+        - 'Modern Development'
+        - 'Other'
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 'Environment'
+      description: 'Please provide your environment details'
+      value: |
+        - OS: [e.g. Windows 11, macOS 14, Ubuntu 22.04]
+        - Claude Code Version: [e.g. 1.0.0]
+        - Node.js Version: [e.g. 20.10.0]
+        - Python Version: [e.g. 3.12.0]
+        - Browser: [e.g. Chrome 120, Firefox 121]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 'Logs / Error Output'
+      description: 'Please copy and paste any relevant log output or error messages'
+      placeholder: 'Paste logs here'
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 'Additional context'
+      description: 'Add any other context about the problem here'
+      placeholder: 'Any additional information that might be helpful'

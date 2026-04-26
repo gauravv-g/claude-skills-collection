@@ -1,0 +1,56 @@
+name: 'Documentation Issue'
+description: 'Report an issue with the documentation'
+title: '[Docs] '
+labels: ['documentation', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! 📚
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: 'What is the issue?'
+      description: 'A clear and concise description of the documentation issue.'
+      placeholder: 'The documentation is unclear, incorrect, or missing...'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location
+    attributes:
+      label: 'Where is the issue?'
+      description: 'Which part of the documentation needs improvement?'
+      options:
+        - 'README.md'
+        - 'QUICK_START.md'
+        - 'CONFIGURATION.md'
+        - 'EXAMPLES.md'
+        - 'SKILLS.md'
+        - 'SECURITY.md'
+        - 'DEVOPS.md'
+        - 'Other documentation file'
+    validations:
+      required: true
+
+  - type: textarea
+    id: location_other
+    attributes:
+      label: 'Other location'
+      description: 'If you selected "Other documentation file", please specify which file.'
+      placeholder: 'docs/FILENAME.md'
+
+  - type: textarea
+    id: suggested
+    attributes:
+      label: 'Suggested improvement'
+      description: 'How would you like to see this improved?'
+      placeholder: 'I suggest adding...'
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 'Additional context'
+      description: 'Add any other context or screenshots about the documentation issue here'
+      placeholder: 'Any additional information that might be helpful'

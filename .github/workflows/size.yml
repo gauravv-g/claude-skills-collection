@@ -1,0 +1,26 @@
+name: PR Size Label
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  size:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Calculate PR size
+        uses: actions-ecosystem/action-size@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files_threshold: 10
+          additions_threshold: 100
+          deletions_threshold: 50
+          label_xs: 'size: XS'
+          label_s: 'size: S'
+          label_m: 'size: M'
+          label_l: 'size: L'
+          label_xl: 'size: XL'
+          label_xxl: 'size: XXL'

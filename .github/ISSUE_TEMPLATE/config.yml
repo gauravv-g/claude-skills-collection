@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/gauravv-g/claude-skills-collection/blob/main/docs/README.md
+    about: Check the documentation for answers to common questions
+  - name: 💬 Discord Community
+    url: https://discord.gg/
+    about: Join our Discord community to chat with other users
+  - name: 🐛 Report a Security Vulnerability
+    url: https://github.com/gauravv-g/claude-skills-collection/blob/main/.github/SECURITY.md
+    about: Please report security vulnerabilities privately

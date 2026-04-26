@@ -1,0 +1,149 @@
+name: 'Pull Request Template'
+description: 'Use this template for all pull requests'
+title: '[PR] '
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! 🎉
+
+        Please make sure you have:
+        - [ ] Read the [Contributing Guidelines](../CONTRIBUTING.md)
+        - [ ] Followed the [Code of Conduct](../CODE_OF_CONDUCT.md)
+        - [ ] Tested your changes thoroughly
+        - [ ] Updated documentation if needed
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 'Type of change'
+      description: 'What type of change is this?'
+      options:
+        - '🐛 Bug fix'
+        - '✨ New feature'
+        - '📝 Documentation'
+        - '♻️ Refactoring'
+        - '⚡ Performance improvement'
+        - '🧪 Test'
+        - '🔧 Configuration'
+        - '🎨 Style'
+        - '🔒 Security'
+        - '🚀 Release'
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 'Description'
+      description: 'A clear and concise description of what this PR does.'
+      placeholder: 'This PR adds...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 'Motivation and context'
+      description: 'Why is this change needed? What problem does it solve?'
+      placeholder: 'This change is needed because...'
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: 'Changes made'
+      description: 'List the specific changes made in this PR.'
+      placeholder: |
+        - Added feature X
+        - Fixed bug Y
+        - Updated documentation Z
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 'Affected Skill(s)'
+      description: 'Which skill(s) are affected by this PR?'
+      multiple: true
+      options:
+        - 'None / Multiple'
+        - 'Multi-Agent Orchestration'
+        - 'Planning & Architecture'
+        - 'Development Workflow'
+        - 'Code Quality'
+        - 'Git & Version Control'
+        - 'UI/UX Design'
+        - 'Documentation & Knowledge'
+        - 'Security & Testing'
+        - 'Security Research'
+        - 'Static Analysis & Security Tools'
+        - 'Fuzzing & Testing'
+        - 'Cryptography & Blockchain'
+        - 'DevOps & Infrastructure'
+        - 'Security Analysis'
+        - 'Debugging & Troubleshooting'
+        - 'Modern Development'
+        - 'Other'
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: 'Testing'
+      description: 'How did you test this change?'
+      placeholder: |
+        - Unit tests: ...
+        - Integration tests: ...
+        - Manual testing: ...
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 'Checklist'
+      description: 'Please complete the following checklist'
+      options:
+        - label: 'My code follows the project style guidelines'
+          required: true
+        - label: 'I have performed a self-review of my code'
+          required: true
+        - label: 'I have commented my code where necessary'
+          required: false
+        - label: 'I have updated the documentation'
+          required: false
+        - label: 'My changes generate no new warnings'
+          required: true
+        - label: 'I have added tests that prove my fix is effective'
+          required: false
+        - label: 'New and existing tests pass locally'
+          required: true
+        - label: 'Any dependent changes have been merged'
+          required: true
+
+  - type: textarea
+    id: breaking
+    attributes:
+      label: 'Breaking changes'
+      description: 'Are there any breaking changes? If so, please describe them.'
+      placeholder: 'This PR breaks...'
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 'Screenshots'
+      description: 'If applicable, add screenshots to help explain your changes.'
+      placeholder: 'Drag and drop screenshots here'
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 'Additional context'
+      description: 'Add any other context about the PR here.'
+      placeholder: 'Any additional information that might be helpful'
+
+  - type: textarea
+    id: related
+    attributes:
+      label: 'Related issues'
+      description: 'Link to related issues or PRs.'
+      placeholder: 'Closes #123, Related to #456'

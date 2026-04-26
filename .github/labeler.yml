@@ -1,0 +1,50 @@
+# Label configuration for pull requests
+# See https://github.com/actions/labeler for usage
+
+# Bug fixes
+bug:
+  - changed-files:
+    - any-glob-to-any-file: ['**/*.ts', '**/*.js', '**/*.py', '**/*.json']
+
+# Features
+feature:
+  - changed-files:
+    - any-glob-to-any-file: ['.claude/skills/**/*']
+
+# Documentation
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['**/*.md', 'docs/**/*']
+
+# Tests
+test:
+  - changed-files:
+    - any-glob-to-any-file: ['**/*test*', '**/*spec*', '**/tests/**/*']
+
+# Configuration
+configuration:
+  - changed-files:
+    - any-glob-to-any-file: ['**/*.json', '**/*.yml', '**/*.yaml', '**/*.toml']
+
+# GitHub Actions
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: ['.github/**/*']
+
+# Security
+security:
+  - changed-files:
+    - any-glob-to-any-file: ['.github/SECURITY.md', 'docs/SECURITY.md']
+
+# DevOps
+devops:
+  - changed-files:
+    - any-glob-to-any-file: ['docker/**/*', '.github/workflows/**/*']
+
+# Breaking changes
+breaking:
+  - head-branch: ['**/breaking/**', '**/major/**']
+
+# Dependencies
+dependencies:
+  - head-branch: ['**/deps/**', '**/dependabot/**']

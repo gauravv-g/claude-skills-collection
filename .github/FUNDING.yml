@@ -1,0 +1,10 @@
+# These are supported funding model platforms
+
+github: [gauravv-g]
+patreon: # Replace with your Patreon username
+open_collective: # Replace with your Open Collective username
+ko_fi: # Replace with your Ko-fi username
+tidelift: # Replace with your Tidelift platform name/package-name
+custom: ["https://paypal.me/example"]
+community_sponsorships:
+  - "claude-skills-collection"
